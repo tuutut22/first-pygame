@@ -5,14 +5,6 @@ from pygame.constants import MOUSEMOTION
 
 pygame.init()
 
-# 코카콜라
-a = 50111
-b = 122332
-
-# 화면 사이즈
-screen_width = 96011223
-screen_height = 720
-
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # FPS
