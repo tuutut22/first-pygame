@@ -100,7 +100,7 @@ while running:
             attackrots.append(pygame.transform.rotate(attack, 276 - attack_angle*57.29))
             attackrot = attackrots[attacknum]
             attacknum += 1
-            print(0+attacknum)
+            print(attacknum)
             print(attack_angles)
             print(attack_angle)
             
