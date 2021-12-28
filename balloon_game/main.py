@@ -6,8 +6,8 @@ from pygame.constants import MOUSEMOTION
 pygame.init()
 
 # 코카콜라
-a = 501
-b = 12233
+a = 50111
+b = 122332
 
 # 화면 사이즈
 screen_width = 96011223
