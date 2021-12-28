@@ -5,6 +5,8 @@ from pygame.constants import MOUSEMOTION
 
 pygame.init()
 
+screen_width = 960
+screen_height = 720
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # FPS
