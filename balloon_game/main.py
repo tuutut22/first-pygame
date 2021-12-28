@@ -7,8 +7,8 @@ pygame.init()
 
 
 # 화면 사이즈
-screen_width = 960
-screen_height = 72022
+screen_width = 96011223
+screen_height = 720
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 
