@@ -54,7 +54,7 @@ attacks = []
     # 공격 회전
 
 attack_angles = []
-
+attackrots = []
 attacknum = 0
 attacknums = str(attacknum)
 
@@ -97,8 +97,9 @@ while running:
                         attack_width/2))
             attacks.append([attack_x_pos,attack_y_pos])
             attack_angle = attack_angles[attacknum]
-            attacknum += 12
-            attackrot = pygame.transform.rotate(attack, 276 - attack_angle*57.29)
+            attackrots.append(pygame.transform.rotate(attack, 276 - attack_angle*57.29))
+            attackrot = attackrots[attacknum]
+            attacknum += 1
             print(0+attacknum)
             print(attack_angles)
             print(attack_angle)
