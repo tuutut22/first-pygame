@@ -97,9 +97,9 @@ while running:
                         attack_width/2))
             attacks.append([attack_x_pos,attack_y_pos])
             attack_angle = attack_angles[attacknum]
-            attacknum += 1
+            attacknum += 12
             attackrot = pygame.transform.rotate(attack, 276 - attack_angle*57.29)
-            print(attacknum)
+            print(0+attacknum)
             print(attack_angles)
             print(attack_angle)
             
