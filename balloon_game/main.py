@@ -53,7 +53,9 @@ attacks = []
 
     # 공격 회전
 
-attack_angles = []
+attackrots = []
+
+attacknum = 0
 
     # 몬스터 이미지
 monster = pygame.image.load(os.path.join(image_path,"monster.png"))
@@ -92,9 +94,12 @@ while running:
                 - attack_y_pos + attack_height/2, \
                     attack_position[0] - attack_x_pos + \
                         attack_width/2)
-            attack_angles.append([attack_angle])
             attacks.append([attack_x_pos,attack_y_pos])
-
+            attackrots.append(pygame.transform.rotate(attack, 276 - attack_angle*57.29)) 
+            attackrot = attackrots[attacknum]
+            attacknum += 1
+            print(attacknum)
+            
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_w or event.key == pygame.K_s:
                 to_y = 0
@@ -141,15 +146,15 @@ while running:
 
         # 어택 이미지 및 회전
 
-    for attack_angle_index, attack_angle_val in enumerate(attack_angles):
-        for w in len(attack_angles):
-            attackrot = pygame.transform.rotate(attack, 276 - attack_angles[w]*57.29)  
+    # for attack_angle_index, attack_angle_val in enumerate(attack_angles):
+    #     for w in len(attack_angle):
+    #         attackrot = pygame.transform.rotate(attack, 276 - attack_angle[w]*57.29)
 
     for attack_x_pos ,attack_y_pos in attacks:
         # attack_position = pygame.mouse.get_pos()
         # attack_angle = math.atan2(attack_position[1] - attack_y_pos + attack_height/2, attack_position[0] - attack_x_pos + attack_width/2)
-        # for attack_angle_index, attack_angle_val in enumerate(balls):
-        #     attackrot = pygame.transform.rotate(attack, 276 - attack_angle*57.29)  
+        # for attack_angle_index, attack_angle_val in enumerate():
+        # attackrot = pygame.transform.rotate(attack, 276 - attack_angle*57.29)  
         attackpos1 = (attack_x_pos -attackrot.get_rect().width//2, attack_y_pos - attackrot.get_rect().height//2)
         screen.blit(attackrot,(attackpos1[0],attackpos1[1]))
 
