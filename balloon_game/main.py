@@ -4,10 +4,10 @@ from random import*
 from pygame.constants import MOUSEMOTION
 
 pygame.init()
-
-
+a = 123123
+b = 232323
 # 화면 사이즈
-screen_width = 960
+screen_width = 960223
 screen_height = 72022
 
 screen = pygame.display.set_mode((screen_width, screen_height))
